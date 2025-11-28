@@ -12,13 +12,13 @@
 
 ## ✅ Project Purpose
 
-This microservice is part of Valle Grande's **Integrated Institutional Educational Management System (SIGEI)**, providing a reactive API for comprehensive management of educational institutions and their classrooms, including:
+This microservice is part of the PRS 1 team **Integrated Institutional Educational Management System (SIGEI)**, providing a reactive API for comprehensive management of educational institutions and their classrooms, including:
 
 - 🏛️ Educational institution management
 - 🚪 Classroom and room administration
 - 👥 Integration with directors and auxiliary staff
 - 📊 Status tracking and educational resource monitoring
-- 🔗 Integration with other microservices in the SIGEI ecosystem
+- 🔗 Integration with other microservices of the SIGEI project
 
 ## 🛠️ Setup Instructions
 
