@@ -1,0 +1,29 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: vg-ms-institution-management
+  data:
+    mongodb:
+      uri: mongodb+srv://sistemaSigei:t2eK0JR0YSwoT02e@sigei.oub8atq.mongodb.net/?retryWrites=true&w=majority&appName=SIGEI
+      database: SIGEI
+      auto-index-creation: false
+
+# Configuración de microservicios externos
+user-service:
+  base-url: http://localhost:9083/api/v1/users
+
+# Configuración de Swagger/OpenAPI
+springdoc:
+  api-docs:
+    path: /v3/api/-docs
+    enabled: true
+
+  swagger-ui:
+    path: /swagger-ui.html
+    try-it-out-enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+    display-request-duration: true
+    disable-swagger-default-url: true
