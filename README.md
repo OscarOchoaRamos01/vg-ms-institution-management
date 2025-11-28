@@ -1,6 +1,6 @@
 # VG Microservice - Institution Management 🏫
 
-**Educational Institution Management System for Valle Grande**
+**Management System of Educational Institutions of the PRS 1 team**
 
 ## 🔧 Tech Stack
 
@@ -15,7 +15,7 @@
 This microservice is part of the PRS 1 team **Integrated Institutional Educational Management System (SIGEI)**, providing a reactive API for comprehensive management of educational institutions and their classrooms, including:
 
 - 🏛️ Educational institution management
-- 🚪 Classroom and room administration
+- 🚪 Classroom administration
 - 👥 Integration with directors and auxiliary staff
 - 📊 Status tracking and educational resource monitoring
 - 🔗 Integration with other microservices of the SIGEI project
@@ -71,13 +71,28 @@ You must have installed:
 
 ### Main Endpoints:
 
-- `GET /api/v1/institutions` - List all institutions
-- `GET /api/v1/institutions/active` - Active institutions
-- `GET /api/v1/institutions/{id}` - Get specific institution
-- `POST /api/v1/institutions/with-users` - Create institution with users
-- `GET /api/v1/classrooms` - Classroom management
-- `PUT /api/v1/institutions/{id}` - Update institution
-- `DELETE /api/v1/institutions/{id}` - Logical deletion
+#### 🏛️ Institution Management:
+
+- `GET /api/v1/institutions` - List all institutions with complete classroom information
+- `GET /api/v1/institutions/active` - List active institutions only
+- `GET /api/v1/institutions/inactive` - List inactive or deleted institutions
+- `GET /api/v1/institutions/{id}` - Get specific institution with users and classrooms
+- `GET /api/v1/institutions/with-users-classrooms` - List all institutions with complete user and classroom info
+- `POST /api/v1/institutions/with-users` - Create institution with director and auxiliary users
+- `PUT /api/v1/institutions/{id}` - Update institution information
+- `DELETE /api/v1/institutions/{id}` - Logical deletion (mark as inactive)
+- `PUT /api/v1/institutions/{id}/restore` - Restore previously deleted institution
+
+#### 🚪 Classroom Management:
+
+- `GET /api/v1/classrooms` - List all classrooms with complete information
+- `GET /api/v1/classrooms/active` - List active classrooms only
+- `GET /api/v1/classrooms/inactive` - List inactive classrooms
+- `GET /api/v1/classrooms/{id}` - Get specific classroom by ID
+- `POST /api/v1/classrooms` - Create new classroom
+- `PUT /api/v1/classrooms/{id}` - Update classroom information
+- `DELETE /api/v1/classrooms/{id}` - Delete classroom
+- `PATCH /api/v1/classrooms/{id}/restore` - Restore previously deleted classroom
 
 ## 🎯 Future Plans & Improvements
 
