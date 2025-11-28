@@ -156,13 +156,6 @@ vg-ms-institution-management/
    ```
 6. **Open a Pull Request** with detailed description
 
-### Contribution Recommendations:
-
-- You **should** follow existing naming conventions
-- You **should** add unit tests for new features
-- You **should** update Swagger documentation if you add new endpoints
-- You **should** include "Fixes #<issue-number>" if your PR resolves an issue
-
 ## 🚀 Deployment Requirements
 
 ### Required Environment Variables:
@@ -179,20 +172,6 @@ APPLICATION_NAME=vg-ms-institution-management
 # External services
 USER_SERVICE_BASE_URL=http://localhost:9083/api/v1/users
 ```
-
-### For Production Deployment:
-
-1. You **must** configure appropriate environment variables
-2. You **must** ensure connectivity with MongoDB Atlas
-3. You **must** configure CORS for your frontend domain
-4. You **need to** compile the project:
-   ```bash
-   ./mvnw clean package -DskipTests
-   ```
-5. **Run** the generated JAR:
-   ```bash
-   java -jar target/vg-ms-institution-management-0.0.1-SNAPSHOT.jar
-   ```
 
 ## 💡 Best Practices & Tips
 
